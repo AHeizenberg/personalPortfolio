@@ -1,0 +1,875 @@
+/* Import fonts */
+/* @font-face {
+  font-family: "Open Sans";
+  src: url(/Fonts/OpenSans-VariableFont_wdth\,wght.ttf) format("truetype");
+
+  font-family: "Lato";
+  src: url(/Fonts/Lato-Black.ttf) format("truetype");
+
+  font-family: "ZCOOL QingKe HuangYou";
+  src: url(/Fonts/ZCOOLQingKeHuangYou-Regular.ttf) format("truetype");
+} */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/*---------START OF HOME PAGE ----------*/
+
+.homepage-body {
+  background-color: black;
+}
+
+/* adjust main's window size, add and format back drop*/
+.homepage-main {
+  width: 100%;
+  height: 100vh;
+  /* border: 10px solid salmon; */
+  color: aliceblue;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  /* background-image: url(/images/pexels-andre-moura-2523959.jpg); */
+  background-image: url(/images/backdrop.png);
+  background-size: cover;
+  background-position-y: center;
+  background-position-x: center;
+  overflow: hidden;
+}
+
+/* Center heading */
+.homepage-heading {
+  text-align: center;
+}
+
+/* format main heading */
+.homepage-main .homepage-heading h1 {
+  font-size: 70px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* format secondary heading */
+.homepage-main .homepage-heading h2 {
+  font-size: 30px;
+  font-family: "Lato", sans-serif;
+}
+
+.homepage-heading button {
+  align-self: center;
+  margin-top: 10px;
+  background-color: #0072b1;
+  cursor: pointer;
+  /* background-color: #C54E57; */
+
+  border: none;
+  border-radius: 10px;
+  transition: all ease-in 0.3s;
+}
+
+.homepage-heading button:hover {
+  transform: translateY(-4px);
+}
+
+.contact-text {
+  font-size: 30px;
+  color: whitesmoke;
+  padding: 8px;
+}
+
+/* media query to scale the headings accordingly */
+@media screen and (max-width: 850px) {
+  .homepage-main .homepage-heading h1 {
+    font-size: 50px;
+  }
+  .homepage-main .homepage-heading h2 {
+    font-size: 20px;
+  }
+}
+
+/* media query to scale the headings accordingly */
+@media screen and (max-width: 650px) {
+  .homepage-main .homepage-heading h1 {
+    font-size: 40px;
+  }
+  .homepage-main .homepage-heading h2 {
+    font-size: 18px;
+  }
+}
+
+/* media query to scale the headings accordingly */
+@media screen and (max-width: 450px) {
+  .homepage-main .homepage-heading h1 {
+    font-size: 30px;
+  }
+  .homepage-main .homepage-heading h2 {
+    font-size: 15px;
+  }
+}
+
+/* media query to scale the nav bar accordingly */
+@media screen and (max-width: 700px) and (min-height: 600px) {
+  .homepage-heading {
+    margin-top: 150px;
+    align-self: flex-start;
+  }
+}
+
+/* format, align and properly place nav bar's container */
+.container {
+  position: relative;
+  display: flex;
+  background-color: black;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 0 25px;
+}
+
+/* format logo */
+.logo {
+  padding-top: 10px;
+  flex-basis: 75px;
+  display: flex;
+}
+
+.logo img {
+  width: 100%;
+}
+
+/* display list items horizontally */
+nav li {
+  display: inline-block;
+  margin-right: 25px;
+  padding-top: 20px;
+}
+
+/* Styling the nav bar text */
+nav li a {
+  color: white;
+  font-family: "Lato", sans-serif;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+/* Styling the links */
+nav li a:link {
+  color: white;
+  text-decoration: none;
+  display: inline;
+}
+
+/* after link clicked */
+nav li a::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 0;
+  background: white;
+  transition: all 0.5s;
+}
+
+/* When hovering the link */
+nav li a:hover::after {
+  width: 100%;
+  color: white;
+  text-decoration: underline rgba(169, 161, 161, 0.865);
+}
+
+/* Scaling the nav bar and it's elements with this media query */
+@media screen and (max-width: 550px) {
+  .container {
+    position: relative;
+    display: flex;
+    background-color: black;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 0 12.5px;
+  }
+
+  .logo {
+    padding-top: 10px;
+    flex-basis: 55px;
+    display: flex;
+  }
+
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+    padding-top: 7.5px;
+  }
+
+  nav li a {
+    color: white;
+    font-family: "Lato", sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 13px;
+  }
+
+  nav li a:link {
+    color: white;
+    text-decoration: none;
+    display: inline;
+  }
+
+  nav li a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 0;
+    background: white;
+    transition: all 0.5s;
+  }
+}
+
+/*-----------END OF HOMEPAGE-------------*/
+
+/*---------START OF ABOUT PAGE ----------*/
+/* set background to black */
+.about-body {
+  background-color: black;
+}
+
+/* create a flex box for main and align items to center */
+.about-main {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* formatting the title's container */
+.full-name-title {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/* appropriately styling the title text */
+.full-name-title p {
+  text-align: center;
+  color: whitesmoke;
+  font-size: 40px;
+}
+
+/* creating and formatting the profile pic, name and icons */
+/* using flexbox */
+.just-headings {
+  align-self: center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 55%;
+}
+
+/* Used to place, align and scale the profile pic */
+.profile-pic-container {
+  align-self: center;
+  padding-bottom: 30px;
+  width: 35%;
+  height: auto;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Scale the image about it's container */
+.profile-pic-container img {
+  width: 100%;
+  border: solid whitesmoke 2px;
+  border-radius: 20%;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* size the table properly */
+table {
+  width: 100%;
+  color: whitesmoke;
+}
+
+/* Style, size and scale the table headings */
+table tr {
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
+/* set the font of the elements in the table */
+table tr td {
+  font-size: 15px;
+}
+
+/* create a flexbox for all the icons */
+.socials {
+  align-self: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* container for each social image */
+/* format, align and add transition for later */
+.social-img-container {
+  align-self: center;
+  padding: 10px;
+  transition: all ease 0.3s;
+}
+
+/* Scale and alight the social icons */
+.social-img-container img {
+  align-self: center;
+  width: 40px;
+  height: 40px;
+}
+
+.github-logo {
+  border: 0.1px solid whitesmoke;
+  border-radius: 5px;
+}
+
+/* hover up effect when cursor over icons */
+.social-img-container:hover {
+  transform: translateY(-3px);
+}
+
+/* Create a grid for about me information */
+.about-me-box {
+  padding-left: 10px;
+  padding-right: 10px;
+  align-self: center;
+  align-items: center;
+  width: 80%;
+  display: grid;
+  /* let the computer decide the number of coloums */
+  /* min 400px and max 1 fraction */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+/* Styling for About me, My Skills and Courses headings */
+.medium-headings {
+  color: whitesmoke;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Styling for the paragrapgh texts */
+.medium-text {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* flex box to align heading and skills grid */
+.my-skills {
+  display: flex;
+  flex-direction: column;
+}
+
+/* create a grid to put all skills in easier for scalability */
+.skills {
+  display: grid;
+  /* let the computer choose the coloums much better for scalibility */
+  grid-template-columns: repeat(auto-fit, minmax(50px, 125px));
+  grid-gap: 1rem;
+}
+
+.courses {
+  text-align: center;
+}
+
+/* Styling the skills text */
+.skills p {
+  padding: 5px 15px;
+  font-size: 18px;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  color: whitesmoke;
+  border-radius: 5px;
+  background-color: #3d3d3d;
+}
+
+/* Media query for when the screen gets smaller */
+@media screen and (max-width: 650px) {
+  /* Make the headings higher percent width so things */
+  /* are still readable and clear */
+  .just-headings {
+    align-self: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+  }
+
+  /* scale down the padding */
+  .social-img-container {
+    align-self: center;
+    padding: 5px;
+  }
+
+  /* scale down the social media icons */
+  .social-img-container img {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* scale the profile pic better for the smaller view */
+  .profile-pic-container {
+    align-self: center;
+    padding-bottom: 30px;
+    width: 40%;
+    height: auto;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* scaling the profile pic img */
+  .profile-pic-container img {
+    width: 100%;
+    border: solid whitesmoke 2px;
+    border-radius: 20%;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* scaling down the text in skills */
+  .skills p {
+    padding: 5px 10px;
+    font-size: 13px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    color: whitesmoke;
+    border-radius: 5px;
+    background-color: #3d3d3d;
+  }
+  /* scale down all the headings */
+  .medium-headings {
+    color: whitesmoke;
+    font-size: 30px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  /* scale down the text aswell */
+  .medium-text {
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    font-size: 13px;
+  }
+
+  /* scaling down name text */
+  .full-name-title p {
+    font-size: 25px;
+  }
+}
+
+/*-------END OF ABOUT PAGE---------------*/
+
+/*-------START OF WORK PAGE--------------*/
+/* Create a flexbox to align major items on page */
+.work-body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+/* style format and align heading */
+.work-heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+  font-size: 50px;
+  color: white;
+}
+
+/* formating main section properly */
+.work-main {
+  padding-top: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+  align-self: center;
+}
+
+/* styling the body text */
+.body-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+/* creating a grid */
+/* all the indiviual projects will be apart of this grid */
+.projects-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 1rem;
+}
+
+/* styling and aligning indiviual project card */
+.project {
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+
+/* align the image container for a project card */
+.project-img-containter {
+  /* rounding the top edges for effect */
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /* resizing it to 1080 */
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* formatting the image to fit the container and stay centered */
+.project-img-containter img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* styling the contet and creating flex box */
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* styling the title at the top of the flexbox */
+.project-title {
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+/* after title in the flex box */
+/* styling the description text */
+.project-description {
+  margin-bottom: 20px;
+}
+
+/* bottom of the flexbox */
+/* creating a new flex to put the github logo on left */
+.project-footer {
+  display: flex;
+  align-self: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+/* bottom of the flexbox */
+/* styling the github image */
+.github-img-container {
+  width: 20%;
+  margin-left: auto;
+  padding: 5px 15px;
+}
+
+.github-img-container img {
+  width: 100%;
+  /* margin-left: auto; */
+  /* padding: 5px 15px; */
+}
+
+/* styling */
+.tools {
+  margin-right: auto;
+  padding: 5px 15px;
+}
+
+/* github image container */
+/* adding hover effect */
+.github-img-container img {
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.github-img-container img:hover {
+  transform: translateY(-4px);
+}
+
+@media screen and (max-width: 400px) {
+  /* Make the headings higher percent width so things */
+  /* are still readable and clear */
+  .work-heading {
+    font-size: 35px;
+  }
+}
+/*--------END OF WORK PAGE---------------*/
+
+/*-------START OF INTERESTS PAGE---------*/
+.int-body {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.int-heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+  font-size: 50px;
+  color: white;
+}
+
+.int-main {
+  align-self: center;
+  /* border: 10px solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fav-movie-heading {
+  padding-left: 10px;
+  align-self: flex-start;
+  color: white;
+  font-size: 40px;
+}
+
+.movie-box {
+  align-self: center;
+  /* border: 10px solid blue; */
+  padding-left: 10px;
+  padding-right: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.movie {
+  max-width: 1000px;
+  background-color: #3d3d3d;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* border: 5px solid green; */
+  grid-gap: 10px;
+}
+
+.movie-img-container {
+  /* background: yellowgreen; */
+
+  /* grid-area: img; */
+  grid-column: span 1;
+  /* grid-row: 1/11; */
+  width: 100%;
+  padding-top: 56.25%;
+  overflow: hidden;
+  position: relative;
+}
+
+.stuff {
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-title {
+  /* background: red; */
+  /* grid-area: title; */
+  /* grid-column: 2/4;
+  grid-row: 1/3; */
+  display: flex;
+  width: 100%;
+}
+
+.movie-title p {
+  align-self: flex-start;
+  color: white;
+  /* font-family: "ZCOOL QingKe HuangYou", cursive; */
+  font-family: "ZCOOL QingKe HuangYou", cursive;
+  font-size: 40px;
+}
+
+.movie-rating {
+  background: #3d3d3d;
+  /* grid-area: rating; */
+  /* grid-column: 2/4;
+  grid-row: 3/5; */
+}
+
+.star-heading {
+  display: flex;
+}
+
+.sub-heading {
+  padding-top: 5px;
+  color: white;
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+.content-body {
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.rating-body {
+  color: white;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+
+.rating-body {
+  padding: 2.5px;
+}
+
+form {
+  width: 100px;
+  margin-left: auto;
+  margin-top: 7px;
+  margin-right: 15px;
+  cursor: pointer;
+  outline: none;
+}
+
+.bio-container {
+  align-self: center;
+  width: 50%;
+  padding-left: 10px;
+  align-self: center;
+  text-align: center;
+}
+
+.bio-heading {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  align-self: center;
+  font-size: 50px;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+.bio-text {
+  align-self: center;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+.button-1 {
+  background-color: whitesmoke;
+  color: #282828;
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+  width: 100px;
+  height: 40px;
+  margin-left: auto;
+  margin-top: 7px;
+  margin-right: 15px;
+  border: none;
+  border-radius: 25px;
+  transition: ease-out 0.3s;
+
+  box-shadow: inset 0 0 0 0 #dc143c;
+}
+
+.button-1:hover {
+  box-shadow: inset 100px 0 0 0 #dc143c;
+}
+
+.button-1:active {
+  box-shadow: inset 100px 0 0 0 black;
+  color: white;
+}
+
+.movie-img-container img {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.star {
+  align-self: center;
+  width: 20px;
+  height: 20px;
+}
+
+@media screen and (max-width: 850px) {
+  .bio-container {
+    align-self: center;
+    width: 75%;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+    text-align: center;
+  }
+
+  .bio-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-self: center;
+    font-size: 25px;
+    font-family: "Poppins", sans-serif;
+    color: white;
+  }
+
+  .fav-movie-heading {
+    font-size: 25px;
+  }
+
+  .bio-text {
+    align-self: center;
+    text-align: center;
+    color: whitesmoke;
+    font-size: 13px;
+    font-family: "Lato", sans-serif;
+  }
+
+  .movie {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 0.5fr;
+    /* border: 5px solid green; */
+    grid-gap: 10px;
+    grid-template-areas: "img" "title" "rating" "description";
+  }
+
+  .movie-img-container {
+    grid-area: img;
+    width: 100%;
+    padding-top: 56.25%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .movie-img-container img {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .movie-title {
+    grid-area: title;
+  }
+
+  .movie-rating {
+    grid-area: rating;
+  }
+
+  .content {
+    grid-area: description;
+  }
+}
+/*--------END OF INTERESTS PAGE----------*/
